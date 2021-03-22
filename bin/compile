@@ -11,3 +11,8 @@ CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_CREDENTIALS)
 echo $CREDENTIALS > $BUILD_DIR/google-credentials.json
 echo "echo ${CREDENTIALS@Q} > /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
 chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
+
+CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_FIREBASE)
+echo $CREDENTIALS > $BUILD_DIR/google-firebase.json
+echo "echo ${CREDENTIALS@Q} > /app/google-firebase.json" > $BUILD_DIR/.profile.d/google-firebase.sh
+chmod +x $BUILD_DIR/.profile.d/google-firebase.sh
